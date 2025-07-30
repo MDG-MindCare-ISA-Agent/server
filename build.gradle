@@ -35,8 +35,21 @@ dependencies {
     testImplementation 'org.springframework.security:spring-security-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
-    implementation 'org.mariadb.jdbc:mariadb-java-client'
+//    implementation 'org.mariadb.jdbc:mariadb-java-client'
+    // sql 연동
+    implementation 'org.mariadb.jdbc:mariadb-java-client:3.3.3'
     implementation 'org.springframework.boot:spring-boot-configuration-processor'
+
+    //JWT
+    implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+    implementation 'io.jsonwebtoken:jjwt-impl:0.11.5'
+    implementation 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+
+    // 유효성 검증용 의존성 추가
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    // redis
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 }
 
 tasks.named('test') {
